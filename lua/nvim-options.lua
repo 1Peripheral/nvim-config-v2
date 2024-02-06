@@ -3,6 +3,8 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set relativenumber")
+vim.cmd("set guitablabel=%t")
+vim.api.nvim_command('set laststatus=2')
 vim.g.mapleader = " "
 vim.cmd.colorscheme "catppuccin"
 
@@ -22,7 +24,7 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.keymap.set('n', '<C-s>', ':w<CR>')
 
 -- Open new tab 
-vim.keymap.set('n', '<leader>w', ':tabnew <CR>')
+vim.keymap.set('n', '<C-p>', ':tabnew <CR>')
 
 -- Switch between tabs
 vim.keymap.set("n", "<leader>1", "1gt<CR>", opts)
@@ -30,3 +32,10 @@ vim.keymap.set("n", "<leader>2", "2gt<CR>", opts)
 vim.keymap.set("n", "<leader>3", "3gt<CR>", opts)
 vim.keymap.set("n", "<leader>4", "4gt<CR>", opts)
 vim.keymap.set("n", "<leader>5", "5gt<CR>", opts)
+
+-- Brackets auto completion
+vim.api.nvim_set_keymap('i', '"', '""<left>', { noremap = true})
+vim.api.nvim_set_keymap('i', '\'', '\'\'<left>', { noremap = true})
+vim.api.nvim_set_keymap('i', '{', '{}<left>', { noremap = true})
+vim.api.nvim_set_keymap('i', '(', '()<left>', { noremap = true})
+vim.api.nvim_set_keymap('i', '[', '[]<left>', { noremap = true})
