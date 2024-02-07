@@ -21,8 +21,12 @@ return {
 
       local lspconfig = require("lspconfig")
 
-      lspconfig.rust_analyzer.setup({})
-      lspconfig.clangd.setup({})
+      lspconfig.rust_analyzer.setup({
+        capabilities = capabilities
+      })
+      lspconfig.clangd.setup({
+        capabilities = capabilities
+      })
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })

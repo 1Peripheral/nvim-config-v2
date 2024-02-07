@@ -7,6 +7,9 @@ vim.cmd("set guitablabel=%t")
 vim.api.nvim_command('set laststatus=2')
 vim.g.mapleader = " "
 vim.cmd.colorscheme "catppuccin"
+-- Transparent BG
+vim.cmd("hi Normal guibg=NONE ctermbg=NONE");
+vim.cmd("hi NormalNc guibg=NONE ctermbg=NONE");
 
 -- Pane navigation 
 vim.keymap.set('n', '<S-k>', ':wincmd k<CR>')
