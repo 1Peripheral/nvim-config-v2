@@ -1,10 +1,8 @@
-vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.cmd("set expandtab")
 vim.cmd("set relativenumber")
-vim.cmd("set guitablabel=%t")
-vim.api.nvim_command('set laststatus=2')
 vim.g.mapleader = " "
 vim.cmd.colorscheme "catppuccin"
 -- Transparent BG
