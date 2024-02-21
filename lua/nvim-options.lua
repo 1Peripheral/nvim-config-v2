@@ -7,7 +7,6 @@ vim.cmd("set number")
 vim.cmd("set laststatus=3")
 
 vim.g.mapleader = " "
-vim.cmd.colorscheme "catppuccin"
 -- Transparent BG
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE");
 vim.cmd("hi NormalNc guibg=NONE ctermbg=NONE");

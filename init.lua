@@ -13,3 +13,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require("nvim-options")
 require("lazy").setup("plugins")
+require("colorscheme")
